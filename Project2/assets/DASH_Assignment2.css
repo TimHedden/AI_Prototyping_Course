@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Acumin';
+    font-weight: bold;
+    src: url('Acumin-BdPro.otf') format('opentype');
+}
+
+body {
+    font-family: 'Acumin', sans-serif;
+    background-color: #f9f9f9;
+    color: #333333;
+    font-size: 15px;
+    margin: 0;
+}
+
+#app-container {
+    width: 100%;
+    max-width: none;
+}
+
+.banner {
+    height: 5.5rem;
+    padding: 0 2rem;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.banner img {
+    position: relative;
+    height: 3rem;
+    width: auto;
+    margin-left: 2%;
+}
+
+.sidebar {
+    padding: 20px;
+    background-color: #f4f4f4;
+    position: fixed;
+    top: 5.5rem;  /* Adjust to be below the banner */
+    bottom: 0;
+    width: 20%;
+    overflow: auto;
+}
+
+.content {
+    margin-left: 25%;
+    padding: 20px;
+    height: 90vh;  /* Adjust the height to be shorter */
+    overflow-y: scroll;
+}
+
+.sidebar-title {
+    color: #2c8cff;
+    font-weight: bold;
+    font-family: Acumin, 'Helvetica Neue', sans-serif;
+}
+
+.button-primary {
+    background-color: #007bff; /* Blue color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.row .column {
+    padding: 10px;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 750px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .banner {
+        height: 6rem;
+    }
+
+    .sidebar-title {
+        font-size: 1.8rem;
+    }
+}
